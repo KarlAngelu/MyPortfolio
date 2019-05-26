@@ -1,6 +1,12 @@
 @include mediaXl {
+  .work-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @include mediaLg {
+  .work-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @include mediaMd {
   main {
@@ -39,6 +45,12 @@
       height: 125px;
     }
   }
+  .work-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @include mediaSm {
+  .work-info {
+    grid-template-columns: 1fr;
+  }
 }
