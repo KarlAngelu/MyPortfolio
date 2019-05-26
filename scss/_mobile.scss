@@ -1,0 +1,44 @@
+@include mediaXl {
+}
+@include mediaLg {
+}
+@include mediaMd {
+  main {
+    justify-content: center;
+    align-items: center;
+    .lg-heading {
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+      margin-left: 3%;
+    }
+    .sm-heading {
+      font-size: 1.5rem;
+    }
+  }
+  .menu-branding,
+  .menu-nav {
+    flex-flow: row wrap;
+    width: 100%;
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .menu-nav {
+    height: 75vh;
+    display: block;
+    transform: translate3d(600px, 0, 0);
+    .nav-item {
+    }
+  }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(-600px, 0, 0);
+    .portrait {
+      width: 125px;
+      height: 125px;
+    }
+  }
+}
+@include mediaSm {
+}

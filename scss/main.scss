@@ -1,15 +1,17 @@
 @import "config";
+@import "menu";
 * {
   box-sizing: border-box;
 }
 
 body {
   @include background;
-  color: #fff;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Segow UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  overflow: hidden;
 }
 
 //Headings
@@ -29,23 +31,26 @@ h3 {
   }
 }
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
+  top: 0;
+  right: 0;
 }
 .text-secondary {
   color: $secondary;
 }
 main {
-  padding: 4rem;
+  padding: 0.5rem;
   height: 100%;
 
   .icons {
     margin-top: 1rem;
+    font-size: 2rem;
     a {
       padding: 0.4rem;
       &:hover {
@@ -61,3 +66,43 @@ main {
     }
   }
 }
+
+.bio-info {
+  margin-top: 0;
+  margin: 0.5rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "bioImg bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-img {
+    grid-area: bioImg;
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    border: solid 3px $secondary;
+    margin: auto;
+  }
+  .bio {
+    grid-area: bio;
+  }
+  .job {
+    background: darken($primary-color, 8);
+    padding: 0.5rem;
+
+    border-top: $secondary 2px solid;
+    .job-1 {
+      grid-area: job1;
+    }
+    .job-2 {
+      grid-area: job2;
+    }
+    .job-3 {
+      grid-area: job3;
+    }
+  }
+}
+
+@import "mobile";
