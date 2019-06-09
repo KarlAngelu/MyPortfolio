@@ -34,8 +34,6 @@
     height: 75vh;
     display: block;
     transform: translate3d(600px, 0, 0);
-    .nav-item {
-    }
   }
   .menu-branding {
     height: 25vh;
@@ -52,5 +50,15 @@
 @include mediaSm {
   .work-info {
     grid-template-columns: 1fr;
+  }
+  .bio-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bioImg"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
   }
 }
