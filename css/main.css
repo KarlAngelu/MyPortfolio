@@ -296,4 +296,8 @@ main {
 
 @media screen and (max-width: 500px) {
   .work-info {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .bio-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'bioImg' 'bio' 'job1' 'job2' 'job3'; } }
